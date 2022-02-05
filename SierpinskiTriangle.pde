@@ -1,18 +1,18 @@
 public void setup(){
   size(700, 700);
   rectMode(CENTER);
-  noSmooth();
+//  noSmooth();
 }
 
 public void draw(){
- // background(0);
- for(int y = 0; y < height; y++){
+  background(0);
+ /* for(int y = 0; y < height; y++){
    for(int x = 0; x < width; x++){
      float z = dist(x, y, width/2, height/2);
      stroke(200 - z);
      point(x, y);
    }
- }
+ } */
   serpinski(350, 350, 180);
 }
 
