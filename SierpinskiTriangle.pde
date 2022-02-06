@@ -13,7 +13,7 @@ public void draw(){
      point(x, y);
    }
  } */
-  serpinski(400, 400, 180);
+  serpinski(400, 400, 200);
 }
 
   public void  mousePressed(){
