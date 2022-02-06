@@ -1,11 +1,11 @@
 public void setup(){
-  size(800, 800);
+  size(700, 700);
   rectMode(CENTER);
   //noSmooth();
 }
 
 public void draw(){
-  background(100);
+  background(25);
  /* for(int y = 0; y < height; y++){
    for(int x = 0; x < width; x++){
      float z = dist(x, y, width/2, height/2);
@@ -13,14 +13,14 @@ public void draw(){
      point(x, y);
    }
  } */
-  serpinski(400, 400, 200);
+  serpinski(350, 350, 180);
 }
 
   public void  mousePressed(){
     int r = (int)(Math.random() * 150);
     int g = (int)(Math.random() * 150);
     int b = (int)(Math.random() * 150);
-    fill(r, g, b, 60);
+    fill(r, g, b, 75);
  }
 public void serpinski(float x, float y, int siz){
    rect(x, y, siz, siz);
