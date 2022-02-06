@@ -5,7 +5,7 @@ public void setup(){
 }
 
 public void draw(){
-  background(0);
+  background(25);
  /* for(int y = 0; y < height; y++){
    for(int x = 0; x < width; x++){
      float z = dist(x, y, width/2, height/2);
@@ -20,7 +20,7 @@ public void draw(){
     int r = (int)(Math.random() * 150);
     int g = (int)(Math.random() * 150);
     int b = (int)(Math.random() * 150);
-    fill(r, g, b);
+    fill(r, g, b, 75);
  }
 public void serpinski(float x, float y, int siz){
  rect(x, y, siz, siz);
