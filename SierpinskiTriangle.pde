@@ -20,7 +20,7 @@ public void draw(){
     int r = (int)(Math.random() * 150);
     int g = (int)(Math.random() * 150);
     int b = (int)(Math.random() * 150);
-    fill(r, g, b, 75);
+    fill(r, g, b, 100);
  }
 public void serpinski(float x, float y, int siz){
  rect(x, y, siz, siz);
