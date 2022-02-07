@@ -1,35 +1,48 @@
+int numOfBase = 10;
 public void setup(){
-  size(700, 700);
-  rectMode(CENTER);
-  //noSmooth();
+  size(600, 600);
 }
 
 public void draw(){
   background(25);
- /* for(int y = 0; y < height; y++){
-   for(int x = 0; x < width; x++){
-     float z = dist(x, y, width/2, height/2);
-     stroke(200 - z);
-     point(x, y);
-   }
- } */
-  serpinski(350, 350, 180);
+  stroke(255);
+  sierpinski1(50, 350, 200);
+  sierpinski1(200, 350, 200);
+  sierpinski1(350, 350, 200);
 }
 
-  public void  mousePressed(){
-    int r = (int)(Math.random() * 150);
-    int g = (int)(Math.random() * 150);
-    int b = (int)(Math.random() * 150);
-    fill(r, g, b, 75);
- }
-public void serpinski(float x, float y, int siz){
-   rect(x, y, siz, siz);
-   if(siz > 2) { 
-   //serpinski(x + siz/4, y + siz/8, siz/2);
-   serpinski(x, y, siz/2);
-   serpinski(x - siz, y, siz/2);
-   serpinski(x + siz, y, siz/2);
-   serpinski(x, y + siz/2, siz/2);
-   serpinski(x, y - siz/2, siz/2);
- }
+public void keyPressed(){
+  if(numOfBase >= 0){
+    if(keyCode == UP){
+      numOfBase += 10;
+  }
+    else if(keyCode == DOWN){
+      numOfBase -= 10;
+    }
+  }
 }
+  
+public void sierpinski1(float x, float y, float len){
+  if(len <= numOfBase){
+    fill(0, 0, 255, 100);
+    triangle(x, y, x + len/2, y - len, x + len, y);
+  }
+  else{
+    len = len/2;
+    sierpinski1(x, y, len);
+    sierpinski1(x + len, y, len);
+    sierpinski1(x + (len/2), y - len, len);
+  }
+  }
+/* public void sierpinski2(float x, float y, float len){
+  if(len >= numOfBase){
+    fill(0, 255, 0);
+    triangle(x, y, x - len/2, y - len, x + len/2, y - len);
+  }
+  else{
+    len = len/2;
+    sierpinski2(x, y, len);
+    sierpinski2(x + len, y, len);
+    sierpinski2(x + (len/2), y - len, len);
+  }
+} */
